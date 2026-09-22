@@ -26,7 +26,7 @@ A aplicação permite que os usuários naveguem pelo cardápio da cafeteria, fil
 
 * React
 * Vite
-* JavaScript (ES6+)
+* JavaScript
 * HTML5
 * CSS3
 * React Router DOM
