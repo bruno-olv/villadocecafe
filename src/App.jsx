@@ -1,4 +1,6 @@
 ﻿import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { FavoritosProvider } from './context/Favoritos'
+import { ThemeProvider } from './context/Theme'
 import Layout from './Componentes/Layout'
 import { useState } from 'react'
 import Login from './Pages/Login'
@@ -23,17 +25,21 @@ function App() {
   }
 
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route element={<Layout usuarioLogado={usuarioLogado} fazerLogout={fazerLogout} />}>
-          <Route index element={<CardapioLayout />} />
-          <Route path="cardapio" element={<Cardapio />} />
-          <Route path="login" element={<Login aoLogar={setUsuarioLogado} />} />
-          <Route path="cadastro" element={<Cadastro />} />
-          <Route path="carrinho" element={<Carrinho />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
+    <ThemeProvider>
+      <FavoritosProvider>
+        <BrowserRouter>
+          <Routes>
+            <Route element={<Layout usuarioLogado={usuarioLogado} fazerLogout={fazerLogout} />}>
+              <Route index element={<CardapioLayout />} />
+              <Route path="cardapio" element={<Cardapio />} />
+              <Route path="login" element={<Login aoLogar={setUsuarioLogado} />} />
+              <Route path="cadastro" element={<Cadastro />} />
+              <Route path="carrinho" element={<Carrinho />} />
+            </Route>
+          </Routes>
+        </BrowserRouter>
+      </FavoritosProvider>
+    </ThemeProvider>
   )
 }
 

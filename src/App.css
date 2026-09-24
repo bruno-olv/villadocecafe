@@ -326,3 +326,10 @@
 .btn-limpar:hover {
   background-color: #FFF0F0;
 }
+
+/* Tema escuro 
+--- so pra testar se esta funcionando direitinho */
+body.tema-escuro {
+  background-color: #1a1a1a;
+  color: #f0f0f0;
+}
