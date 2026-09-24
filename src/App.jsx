@@ -5,6 +5,7 @@ import Login from './Pages/Login'
 import Cadastro from './Pages/Cadastro'
 import CardapioLayout from './Componentes/CardapioLayout'
 import Cardapio from './Pages/Cardapio'
+import Carrinho from './Pages/Carrinho'
 import './App.css'
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
           <Route path="cardapio" element={<Cardapio />} />
           <Route path="login" element={<Login aoLogar={setUsuarioLogado} />} />
           <Route path="cadastro" element={<Cadastro />} />
+          <Route path="carrinho" element={<Carrinho />} />
         </Route>
       </Routes>
     </BrowserRouter>

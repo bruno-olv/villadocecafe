@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom"
+import CartIcon from "./CartIcon"
 
 function Navbar({ usuarioLogado, fazerLogout }) {
 
@@ -27,6 +28,11 @@ function Navbar({ usuarioLogado, fazerLogout }) {
 
         {usuarioLogado ? (
           <>
+
+            <NavLink to="/carrinho" className={estiloLink}>
+              <CartIcon size={20} />
+            </NavLink>
+
             <span className="usuario-navbar">
               Olá, {usuarioLogado.nome}
             </span>
@@ -37,6 +43,7 @@ function Navbar({ usuarioLogado, fazerLogout }) {
             >
               Sair
             </button>
+
           </>
         ) : (
           <>
