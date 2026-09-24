@@ -1,5 +1,4 @@
 import { useState, useMemo } from 'react';
-import { Link } from 'react-router-dom';
 import cardapio from '../Data/Cardapio';
 
 function Cardapio() {
@@ -30,11 +29,9 @@ function Cardapio() {
       <p className="subtitulo">Escolha seu pedido e a quantidade desejada</p>
       <ul className="lista-cardapio">
         {cardapio.map((produto) => (
-          <li key={pizza.id} className="item-cardapio">
+          <li key={produto.id} className="item-cardapio">
             <div className="info-produto">
-              <Link to={`/cardapio/${produto.id}`} className="link-detalhe">
-                <h3>{produto.nome}</h3>
-              </Link>
+              <h3>{produto.nome}</h3>
               <p>{produto.descricao}</p>
               <p className="preco">R$ {produto.preco.toFixed(2)}</p>
             </div>

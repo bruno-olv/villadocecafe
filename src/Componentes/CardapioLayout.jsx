@@ -1,5 +1,4 @@
-import { Link } from 'react-router-dom';
-import cardapio from '../data/cardapio';
+import cardapio from '../Data/Cardapio';
 
 function CardapioLayout() {
   return (
