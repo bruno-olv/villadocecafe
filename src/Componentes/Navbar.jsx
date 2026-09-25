@@ -32,7 +32,11 @@ function Navbar({ usuarioLogado, fazerLogout }) {
             <span className="contador-favoritos">{favoritos.length}</span>
           )}
         </NavLink>
-        
+
+        <NavLink to="/cardapio/favoritos" className={estiloLink}>
+          Ver favoritos
+        </NavLink>
+
         <button
           type="button"
           onClick={alternarTema}

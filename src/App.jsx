@@ -8,6 +8,7 @@ import Cadastro from './Pages/Cadastro'
 import CardapioLayout from './Componentes/CardapioLayout'
 import Cardapio from './Pages/Cardapio'
 import Carrinho from './Pages/Carrinho'
+import ListaFavoritos from './Pages/ListaFavoritos'
 import './App.css'
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
             <Route element={<Layout usuarioLogado={usuarioLogado} fazerLogout={fazerLogout} />}>
               <Route index element={<CardapioLayout />} />
               <Route path="cardapio" element={<Cardapio />} />
+              <Route path="cardapio/favoritos" element={<ListaFavoritos />} />
               <Route path="login" element={<Login aoLogar={setUsuarioLogado} />} />
               <Route path="cadastro" element={<Cadastro />} />
               <Route path="carrinho" element={<Carrinho />} />
