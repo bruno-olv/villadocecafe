@@ -6,7 +6,7 @@
     descricao: '40ml',
     preco: 10.0,
     imagem:
-      'https://media.istockphoto.com/id/1302454454/pt/foto/espresso-coffee-with-coffee-beans-in-the-morning-background.jpg?s=612x612&w=is&k=20&c=2N1AExk38wRfmp3SaihgC0rfauIUg7K0_fM_jX0UhCs=',
+      'https://media.istockphoto.com/id/2162749083/pt/foto/cup-of-coffee-on-wooden-background-close-up-copy-space.jpg?s=612x612&w=0&k=20&c=_ciWSirFwq38ypE3Iomcz6lJnG9OV3kqXD1UObFJHjY=',
   },
   {
     id: 2,
@@ -14,16 +14,14 @@
     quantidade: '50ml',
     descricao: 'café com a crema do leite',
     preco: 11.0,
-    imagem:
-      'https://media.istockphoto.com/id/843128728/pt/foto/coffee-latte-coffee-with-whipped-cream-topping-in-a-tall-glass-on-a-wooden-background-with.webp?s=1024x1024&w=is&k=20&c=rGzsmPCKNJfCbrBOrr1IT9LxsP2qfkvk5FBFJAri-ho=',
+    imagem: 'https://media.istockphoto.com/id/1466271613/pt/foto/cup-of-hot-coffee-latte-on-a-wooden-table-morning-time.jpg?s=612x612&w=0&k=20&c=v7nio4LLgz_NrECzYSjlnX54Mb-cAlBNC4709vGuoys=', 
   },
   {
     id: 3,
     nome: 'Capuccino',
     quantidade: '100ml',
     preco: 15.0,
-    imagem:
-      'https://media.istockphoto.com/id/505168330/pt/foto/copo-de-caf%C3%A9-latte-cafecom-gr%C3%A3os-de-caf%C3%A9-e-paus-de-canela.webp?s=1024x1024&w=is&k=20&c=9gssV4ZKB1JPU7WezUGqYJLVXH0g00i3aXJX41uRa7k=',
+    imagem: 'https://media.istockphoto.com/id/523168750/pt/foto/caf%C3%A9-com-gr%C3%A3os-de-caf%C3%A9-na-mesa-de-madeira.jpg?s=612x612&w=0&k=20&c=MRLSozTzhAVHWYziNJIA7FNxELtCGKSb0iWehHfWz0A=',
   },
   {
     id: 4,
@@ -31,8 +29,7 @@
     quantidade: '150ml',
     descricao: 'tradicional "café com leite" ',
     preco: 16.0,
-    imagem:
-      'https://media.istockphoto.com/id/2173829000/pt/foto/hot-latte-coffee-with-beautiful-latte-art-serve-in-green-color-cup.webp?s=1024x1024&w=is&k=20&c=_-Vx3aY-CmxsrLLjJVHNrUORQdZh-437wpS09ZO9VcE=',
+    imagem: 'https://media.istockphoto.com/id/1212682428/pt/foto/breakfast-in-the-cafe-beautiful-blue-mug-with-cappuccino-or-latte-coffee-on-a-wooden-table.jpg?s=612x612&w=0&k=20&c=1FKURqbTADzjctBjIjWfqMiackbuFbMAJmliAjKMPrc=',
   },
   {
     id: 5,
@@ -40,56 +37,55 @@
     quantidade: '40ml',
     preco: 12.0,
     imagem:
-      'https://media.istockphoto.com/id/1327256958/pt/foto/isolated-cup-of-coffee.webp?s=1024x1024&w=is&k=20&c=j2sUkw6bGI_Y0asa4-sKu9xceCdv-K7eTwOP8SeNG6w=',
+      'https://media.istockphoto.com/id/1388959658/pt/foto/coffee-and-dandelions-on-a-white-background.jpg?s=612x612&w=0&k=20&c=hTGEzmZqbicm7F6Lk5tUwYcOmygFmjqZeC2_7IPXoQg=',
   },
   {
     id: 6,
     nome: 'Fatia de bolo de cenoura',
     preco: 15.0,
     imagem:
-      'https://media.istockphoto.com/id/1313708623/pt/foto/carrot-cake-with-chocolate-icing-brazilian-cake.jpg?s=612x612&w=is&k=20&c=yXA2n72hL3hB6A5Jk4ZKRuZefXXIXdCamtm8evrj_Ag=',
+      'https://media.istockphoto.com/id/1313708617/pt/foto/carrot-cake-with-chocolate-icing-brazilian-cake.jpg?s=612x612&w=0&k=20&c=Nq_F0zZcc5ttjD8zlYGccRlQ74zosatdd8DCCqvkmyI=',
   },
   {
     id: 7,
     nome: 'Fatia de bolo red velvet',
     preco: 15.0,
     imagem:
-      'https://media.istockphoto.com/id/1363074066/pt/foto/red-velvet-cake-portion.jpg?s=612x612&w=is&k=20&c=KeNUpDGPP01aeA6uu3_F2LAHq3IABFWdzgyL1Xyr7_8=',
+      'https://media.istockphoto.com/id/1014916124/pt/foto/red-velvet-cake.jpg?s=612x612&w=0&k=20&c=gOJpnofL5iUhiQkjadEoadK9hA8igXFXXehavIe0FyI=',
   },
   {
     id: 8,
     nome: 'Fatia de bolo de chocolate',
     preco: 15.0,
     imagem:
-      'https://media.istockphoto.com/id/533632245/pt/foto/bolo-de-chocolate.jpg?s=612x612&w=0&k=20&c=VnBC1spY5B545GQif-fqN24W0kOKPiRKJpr4vi3gj1g=',
+      'https://media.istockphoto.com/id/868803926/pt/foto/chocolate-cake-on-wooden-table.jpg?s=612x612&w=0&k=20&c=7oYYthVHhkXpDwLlmLCh-POWHK8ZK-KFHhwO-rx37CM=',
   },
   {
     id: 9,
     nome: 'Pão de queijo',
     preco: 5.0,
     imagem:
-      'https://media.istockphoto.com/id/1174449459/pt/foto/cheese-bread.jpg?s=612x612&w=is&k=20&c=txsAeWJbuTh8ZncAW594FnUOqsH-a1GW6HGwNsuAYFk=',
+      'https://media.istockphoto.com/id/1193388223/pt/foto/brazilian-snack-traditional-cheese-bread.jpg?s=612x612&w=0&k=20&c=WqZDdiS6lXNmwn17qCVzSukEnLPZ3pFuh4oVJEgD96M=',
   },
   {
     id: 10,
     nome: 'Pão na chapa',
     preco: 5.0,
     imagem:
-      'https://media.istockphoto.com/id/1022538812/pt/foto/breakfast-at-brazil-with-french-bread-toasted-with-butter-on-the-plate-with-capuccino-on-table.jpg?s=612x612&w=is&k=20&c=LqzaHMGMufNHXXIhoVjl936GEF_kpIK5RMcAY9cxiSs=',
+      'https://media.istockphoto.com/id/1158395339/pt/foto/brazilian-breakfast-capuccino-cup-and-toasted-bread-with-butter-background.jpg?s=612x612&w=0&k=20&c=2n-59QXnMbkO0rTsFG9V6m5TqgPprvn-lowyDJI058I=',
   },
   {
     id: 11,
     nome: 'Misto quente',
     preco: 5.0,
     imagem:
-      'https://media.istockphoto.com/id/1313740002/pt/foto/grilled-ham-and-cheese-sandwich-with-cheese-and-ham-on-grill.jpg?s=612x612&w=is&k=20&c=Ybx59c_2VPmK6BQT27z2S_bPIMIAAVFYepayb40s-H8=',
+      'https://media.istockphoto.com/id/959576494/pt/foto/grilled-ham-and-cheese-sandwiches.jpg?s=612x612&w=0&k=20&c=cCkcACBt9kTnc-Aqa6uvVw8OCzPhmAeY_Wj9f1wQ6yM=',
   },
   {
     id: 12,
     nome: 'Suco de larenja',
     preco: 5.0,
-    imagem:
-      'https://media.istockphoto.com/id/643943076/pt/foto/sumo-de-laranja.jpg?s=612x612&w=is&k=20&c=Lq4Apq3LFpsU-_s8FOmqukOhhV5nW01gjkUj6NQh4Go=',
+    imagem: 'https://media.istockphoto.com/id/612385612/pt/foto/sumo-de-laranja.jpg?s=612x612&w=0&k=20&c=tWeChZRpESu82AlEAm6dc_vbdUIvFZ3Z7VXWd7UsFuc=',
   },
 ];
 export default cardapio;
