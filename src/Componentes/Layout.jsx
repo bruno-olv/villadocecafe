@@ -1,16 +1,24 @@
-import { Outlet } from 'react-router-dom';
-import Navbar from './Navbar';
-import Footer from './Footer';
+import { Outlet } from 'react-router-dom'
+import Navbar from './Navbar'
+import Footer from './Footer'
 
-function Layout() {
+function Layout({ usuarioLogado, fazerLogout }) {
   return (
     <div className="pagina">
-      <Navbar />
+
+      <Navbar
+        usuarioLogado={usuarioLogado}
+        fazerLogout={fazerLogout}
+      />
+
       <main className="conteudo">
         <Outlet />
       </main>
+
       <Footer />
+
     </div>
-  );
+  )
 }
-export default Layout;
+
+export default Layout

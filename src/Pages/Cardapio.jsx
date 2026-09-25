@@ -1,10 +1,11 @@
 import { useState, useMemo } from 'react';
-import { Link } from 'react-router-dom';
+import { useFavoritos } from '../context/Favoritos';
 import cardapio from '../Data/Cardapio';
 
 function Cardapio() {
   const [quantidades, setQuantidades] = useState({});
   const [pedidoFinalizado, setPedidoFinalizado] = useState(false);
+  const { ehFavorito, alternarFavorito } = useFavoritos();
   function alterarQuantidade(id, delta) {
     setQuantidades((quantidadesAtuais) => {
       const quantidadeAtual = quantidadesAtuais[id] || 0;
@@ -30,11 +31,27 @@ function Cardapio() {
       <p className="subtitulo">Escolha seu pedido e a quantidade desejada</p>
       <ul className="lista-cardapio">
         {cardapio.map((produto) => (
-          <li key={pizza.id} className="item-cardapio">
+          <li key={produto.id} className="item-cardapio">
             <div className="info-produto">
-              <Link to={`/cardapio/${produto.id}`} className="link-detalhe">
-                <h3>{produto.nome}</h3>
-              </Link>
+              <div className="titulo-favoritos">
+                 <button
+                  type="button"
+                  className={
+                    ehFavorito(produto.id)
+                      ? "botao-favorito botao-favorito-ativo"
+                      : "botao-favorito"
+                  }
+                  onClick={() => alternarFavorito(produto.id)}
+                  aria-label={
+                    ehFavorito(produto.id)
+                      ? "Remover dos favoritos"
+                      : "Marcar como favorita"
+                  }
+                >
+                  {ehFavorito(produto.id) ? "♥" : "♡"}
+                </button>
+              </div>
+              <h3>{produto.nome}</h3>
               <p>{produto.descricao}</p>
               <p className="preco">R$ {produto.preco.toFixed(2)}</p>
             </div>
