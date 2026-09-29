@@ -44,9 +44,9 @@ function Navbar({ usuarioLogado, fazerLogout }) {
 
           <NavLink to="/cardapio" className={estiloLink}>
             Cardápio
-            {favoritos.length > 0 && (
+            {/* {favoritos.length > 0 && (
               <span className="contador-favoritos">{favoritos.length}</span>
-            )}
+            )}  */}
           </NavLink>
 
           <NavLink to="/cardapio/favoritos" className={estiloLink}>
