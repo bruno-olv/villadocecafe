@@ -104,10 +104,6 @@ p.paragrafo1 {
 }
 
 /* ESTILO DAS FOTOS */
-/* o bug do zoom era a altura fixa (480px) enquanto a largura crescia livre com o flex.
-   em tela grande isso deixava a caixa numa proporção muito diferente da foto,
-   forçando o cover a cortar/ampliar demais. com aspect-ratio a proporção fica
-   travada sempre igual, então a foto cresce grande mas sem distorcer o enquadramento */
 img.primeira-foto,
 img.segunda-foto,
 img.terceira-foto {
