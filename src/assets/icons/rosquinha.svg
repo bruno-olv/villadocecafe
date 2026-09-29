@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
+  <!-- Massa da Rosquinha -->
+  <path d="M50,10 A40,40 0 1,1 49.9,10 Z" fill="#E8B88A" />
+  <path d="M50,35 A15,15 0 1,0 50.1,35 Z" fill="#fffaf8" />
+  
+  <!-- Cobertura Rosa -->
+  <path d="M50,12 C68,12 85,22 87,42 C89,55 80,62 78,72 C76,82 62,88 50,88 C38,88 22,82 21,70 C20,58 12,48 15,35 C18,20 32,12 50,12 Z" fill="#D8819D" />
+  <path d="M50,35 A15,15 0 1,0 50.1,35 Z" fill="#fffaf8" />
+
+  <!-- Granulados / Confeitos Coloridos -->
+  <rect x="35" y="25" width="3" height="8" rx="1.5" fill="#FFF" transform="rotate(30 35 25)"/>
+  <rect x="60" y="28" width="3" height="8" rx="1.5" fill="#FFF" transform="rotate(-20 60 28)"/>
+  <rect x="72" y="48" width="3" height="8" rx="1.5" fill="#FFF" transform="rotate(45 72 48)"/>
+  <rect x="25" y="50" width="3" height="8" rx="1.5" fill="#FFF" transform="rotate(-40 25 50)"/>
+  <rect x="42" y="75" width="3" height="8" rx="1.5" fill="#FFF" transform="rotate(15 42 75)"/>
+  <rect x="62" y="70" width="3" height="8" rx="1.5" fill="#FFF" transform="rotate(-60 62 70)"/>
+</svg>

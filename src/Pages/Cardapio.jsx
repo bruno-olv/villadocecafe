@@ -1,5 +1,5 @@
 import { useState, useMemo } from 'react';
-import { useFavoritos } from '../context/Favoritos';
+import { useFavoritos } from '../Context/Favoritos';
 import cardapio from '../Data/Cardapio';
 
 function Cardapio() {
@@ -34,7 +34,7 @@ function Cardapio() {
           <li key={produto.id} className="item-cardapio">
             <div className="info-produto">
               <div className="titulo-favoritos">
-                 <button
+                <button
                   type="button"
                   className={
                     ehFavorito(produto.id)

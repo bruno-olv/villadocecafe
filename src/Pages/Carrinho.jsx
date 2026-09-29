@@ -1,4 +1,5 @@
 import { useState } from "react";
+import './Carrinho.css'
 
 
 function Carrinho() {
@@ -14,53 +15,54 @@ function Carrinho() {
 
     return (
         <section className="container-carrinho">
-            <div className="layout">
+            <div className="layout-carrinho">
                 <h2>Carrinho</h2>
-            </div>
 
-            <div className="conteudo-carrinho">
-                <table className="tabela-carrinho">
-                    <thead>
-                        <tr>
-                            <th className="tabela-primeiro-item">Item</th>
-                            <th className="tabela-segundo-item">Preço</th>
-                            <th className="tabela-terceiro-item">Quantidade</th>
-                        </tr>
-                    </thead>
+                {/* Grid que organiza a tabela e o resumo lado a lado */}
+                <div className="grid-carrinho">
+                    <div className="conteudo-carrinho">
+                        <table className="tabela-carrinho">
+                            <thead>
+                                <tr>
+                                    <th className="tabela-primeiro-item">Item</th>
+                                    <th className="tabela-segundo-item">Preço</th>
+                                    <th className="tabela-terceiro-item">Quantidade</th>
+                                </tr>
+                            </thead>
 
-                    <tbody>
-                        {/* 3. Mapeando a lista para criar as linhas da tabela */}
-                        {itens.map((produto) => (
-                            <tr key={produto.id}>
-                                <td>{produto.nome}</td>
-                                <td>R$ {produto.preco.toFixed(2)}</td>
-                                <td>{produto.quantidade}</td>
-                            </tr>
-                        ))}
-                    </tbody>
-                </table>
-            </div>
-
-            <div className="sumario-carrinho">
-                {/* Total, Frete(talvez), Botões */}
-
-                <div className="resumo">
-                    <div className="resumo-linha">
-                        <span>Subtotal dos itens</span>
-                        <span>R$ {total.toFixed(2)}</span>
+                            <tbody>
+                                {/* 3. Mapeando a lista para criar as linhas da tabela */}
+                                {itens.map((produto) => (
+                                    <tr key={produto.id}>
+                                        <td>{produto.nome}</td>
+                                        <td>R$ {produto.preco.toFixed(2)}</td>
+                                        <td>{produto.quantidade}</td>
+                                    </tr>
+                                ))}
+                            </tbody>
+                        </table>
                     </div>
-                    <div className="resumo-linha">
-                        <span>Frete</span>
-                        <span>Grátis</span>
+
+                    <div className="sumario-carrinho">
+                        {/* Total, Frete(talvez), Botões */}
+                        <div className="resumo">
+                            <div className="resumo-linha">
+                                <span>Subtotal dos itens</span>
+                                <span>R$ {total.toFixed(2)}</span>
+                            </div>
+                            <div className="resumo-linha">
+                                <span>Frete</span>
+                                <span>Grátis</span>
+                            </div>
+                            <div className="resumo-linha total-linha">
+                                <span>Total a pagar</span>
+                                <span>R$ {total.toFixed(2)}</span>
+                            </div>
+                            <button className="btn-finalizar">Finalizar Compra</button>
+                            <button className="btn-limpar">Limpar carrinho</button>
+                        </div>
                     </div>
-                    <div className="resumo-linha total-linha">
-                        <span>Total a pagar</span>
-                        <span>R$ {total.toFixed(2)}</span>
-                    </div>
-                    <button className="btn-finalizar">Finalizar Compra</button>
-                    <button className="btn-limpar">Limpar carrinho</button>
                 </div>
-
             </div>
         </section>
     );
