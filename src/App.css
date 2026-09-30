@@ -127,30 +127,6 @@
   }
 }
 
-.ticks {
-  position: relative;
-  width: 100%;
-
-  &::before,
-  &::after {
-    content: '';
-    position: absolute;
-    top: -4.5px;
-    border: 5px solid transparent;
-  }
-
-  &::before {
-    left: 0;
-    border-left-color: var(--border);
-  }
-
-  &::after {
-    right: 0;
-    border-right-color: var(--border);
-  }
-}
-
-
 /* Estilos da página do carrinho, coloquei apenas pra ver como irá ficar, qualquer coisa mudar dps! */
 
 .container-carrinho {
@@ -270,7 +246,7 @@
   background-color: #F4C2C2;
   /* Rosa pastel de destaque */
   color: #4A2E2E;
-  /* Texto um pouqinho escuro em tom café para dar um contraste */
+  /* Texto um pouquinho escuro em tom café para dar um contraste */
 }
 
 .btn-finalizar:hover {
