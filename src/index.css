@@ -405,7 +405,8 @@ button {
 
 .info-produto {
   flex: 1;
-  min-width: 0; /* Impede que textos longos estiquem o elemento para fora */
+  text-align: left;
+  min-width: 0; /* Impede que o texto estique para cima dos botões */
 }
 
 .titulo-favoritos {
@@ -472,6 +473,7 @@ button {
   padding: 6.4px 12.8px;
   border-radius: 35px;
   border: 1px solid var(--cor-primaria-clara);
+  flex-shrink: 0;
 }
 
 .controle-quantidade button {
