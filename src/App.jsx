@@ -1,6 +1,6 @@
 ﻿import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { FavoritosProvider } from './context/Favoritos'
-import { ThemeProvider } from './Context/Theme'
+import { ThemeProvider } from './context/Theme'
 import Layout from './Components/Layout'
 import { useState } from 'react'
 import Login from './Pages/Login'

@@ -33,7 +33,7 @@ export default function Home() {
                 <div className="container-foto">
                     <img
                         className="primeira-foto"
-                        src={cappuccinoImg}
+                        src={'https://media.istockphoto.com/id/523168750/pt/foto/caf%C3%A9-com-gr%C3%A3os-de-caf%C3%A9-na-mesa-de-madeira.jpg?s=612x612&w=0&k=20&c=MRLSozTzhAVHWYziNJIA7FNxELtCGKSb0iWehHfWz0A='}
                         alt="Cappuccino Doce de Leite"
                     />
                 </div>
