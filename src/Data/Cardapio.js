@@ -1,4 +1,4 @@
- import Expresso from '../assets/images/Expresso.jpg';
+import Expresso from '../assets/images/Expresso.jpg';
 import Macchiato from '../assets/images/Macchiato.jpg';
 import Capuccino from '../assets/images/Capuccino.jpg';
 import Latte from '../assets/images/Latte.jpg';
