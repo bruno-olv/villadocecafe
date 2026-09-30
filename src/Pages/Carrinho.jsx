@@ -1,18 +1,29 @@
 import { useState } from "react";
+import { useLocation, useNavigate } from 'react-router-dom';
 import './Carrinho.css'
-
 
 function Carrinho() {
 
-    // 1. Estado inicial com 2 produtos criados
-    const [itens, setItens] = useState([
-        { id: 1, nome: "Café Expresso", preco: 8.50, quantidade: 2 },
-        { id: 2, nome: "Croissant de Chocolate", preco: 12.00, quantidade: 1 }
-    ]);
+    const location = useLocation();
+    const navigate = useNavigate();
+
+    const itens = location.state?.itens || [];
 
     // 2. Cálculo do total usando JavaScript puro
     const total = itens.reduce((soma, item) => soma + (item.preco * item.quantidade), 0)
 
+    function finalizarCompra() {
+    alert('Compra finalizada com sucesso!');
+    navigate('/cardapio');
+    }
+            function limparCarrinho() {
+            navigate('/carrinho', {
+             state: {
+             itens: [],
+                     },
+             replace: true,
+              });
+                }
     return (
         <section className="container-carrinho">
             <div className="layout-carrinho">
@@ -58,8 +69,17 @@ function Carrinho() {
                                 <span>Total a pagar</span>
                                 <span>R$ {total.toFixed(2)}</span>
                             </div>
-                            <button className="btn-finalizar">Finalizar Compra</button>
-                            <button className="btn-limpar">Limpar carrinho</button>
+                            <button
+                            className="btn-finalizar"
+                            onClick={finalizarCompra}
+                                >
+                            Finalizar Compra
+                            </button>
+
+                            <button className="btn-limpar"
+                            onClick={limparCarrinho}>
+                                Limpar carrinho
+                                </button>
                         </div>
                     </div>
                 </div>
