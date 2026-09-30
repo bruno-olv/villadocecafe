@@ -43,7 +43,7 @@
 
 html, body {
   width: 100%;
-  min-height: 900px; /* Convertido de 100vh com base em 900px */
+  min-height: 900px; 
   font-family: var(--fonte-corpo);
   color: var(--cor-texto-principal);
   background-color: var(--cor-rosa-bg);
@@ -57,7 +57,7 @@ html, body {
   width: 100% !important;
   max-width: 100% !important;
   margin: 0 auto;
-  min-height: 900px; /* Convertido de 100vh */
+  min-height: 900px; 
   border-inline: none !important;
   display: flex;
   flex-direction: column;
@@ -66,7 +66,7 @@ html, body {
 .pagina {
   display: flex;
   flex-direction: column;
-  min-height: 900px; /* Convertido de 100vh */
+  min-height: 900px; 
   width: 100%;
 }
 
@@ -402,7 +402,7 @@ button {
 }
 
 .item-cardapio img {
-  width: 150px; /* Define um tamanho fixo ou controlado para a imagem do produto no card */
+  width: 150px; 
   height: 150px;
   object-fit: cover;
   border-radius: 12px;
@@ -418,7 +418,8 @@ button {
 .titulo-favoritos {
   display: flex;
   justify-content: flex-end;
-  margin-bottom: -10px;
+  align-items: center;
+  margin-top: 10px; 
 }
 
 .botao-favorito {
@@ -430,6 +431,7 @@ button {
   line-height: 1;
   padding: 4px;
   transition: all 0.25s ease;
+  margin-top: 12px; 
 }
 
 .botao-favorito:hover {
@@ -648,7 +650,7 @@ button {
 
 /* Autenticação: Login e Cadastro */
 .auth-container {
-  min-height: 660px; /* Convertido de calc(100vh - 240px) com base em 900px */
+  min-height: 660px; 
   display: flex;
   align-items: center;
   justify-content: center;
@@ -770,7 +772,7 @@ button {
 /* Carrinho de Compras */
 .container-carrinho {
   width: 100%;
-  min-height: 700px; /* Convertido de calc(100vh - 200px) com base em 900px */
+  min-height: 700px; 
   background-color: transparent !important;
   padding: 24px 0;
   display: grid;
