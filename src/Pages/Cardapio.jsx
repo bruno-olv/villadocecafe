@@ -32,6 +32,10 @@ function Cardapio() {
       <ul className="lista-cardapio">
         {cardapio.map((produto) => (
           <li key={produto.id} className="item-cardapio">
+              <img
+             src={produto.imagem}
+             alt={produto.nome}
+             className="imagem-produto" />
             <div className="info-produto">
               <div className="titulo-favoritos">
                 <button
@@ -52,7 +56,7 @@ function Cardapio() {
                 </button>
               </div>
               <h3>{produto.nome}</h3>
-              <p>{produto.descricao}</p>
+              <p>{produto.quantidade}</p>
               <p className="preco">R$ {produto.preco.toFixed(2)}</p>
             </div>
             <div className="controle-quantidade">
