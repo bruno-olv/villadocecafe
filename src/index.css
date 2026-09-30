@@ -43,7 +43,7 @@
 
 html, body {
   width: 100%;
-  min-height: 100vh;
+  min-height: 900px; /* Convertido de 100vh com base em 900px */
   font-family: var(--fonte-corpo);
   color: var(--cor-texto-principal);
   background-color: var(--cor-rosa-bg);
@@ -57,7 +57,7 @@ html, body {
   width: 100% !important;
   max-width: 100% !important;
   margin: 0 auto;
-  min-height: 100vh;
+  min-height: 900px; /* Convertido de 100vh */
   border-inline: none !important;
   display: flex;
   flex-direction: column;
@@ -66,7 +66,7 @@ html, body {
 .pagina {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  min-height: 900px; /* Convertido de 100vh */
   width: 100%;
 }
 
@@ -75,7 +75,7 @@ html, body {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 2.5rem 1.5rem;
+  padding: 40px 24px;
 }
 
 h1, h2, h3, h4 {
@@ -104,25 +104,25 @@ button {
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 2px solid #f7bcc4;
   box-shadow: 0 4px 20px rgba(211, 107, 116, 0.15);
-  padding: 0.9rem 2.5rem;
+  padding: 14.4px 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 1.5rem;
+  gap: 24px;
   transition: background-color 0.3s ease;
 }
 
 /* Nome do Estabelecimento (Navbar Marca) */
 .navbar-marca {
   font-family: var(--fonte-marca);
-  font-size: 2.1rem;
+  font-size: 33.6px;
   font-weight: 400;
   letter-spacing: 0.3px;
   line-height: 1;
   color: #ba4752;
   display: inline-flex;
   align-items: center;
-  gap: 0.8rem;
+  gap: 12.8px;
   user-select: none;
   transition: color 0.25s ease;
 }
@@ -146,21 +146,21 @@ button {
 .navbar-links {
   display: flex;
   align-items: center;
-  gap: 1.25rem;
+  gap: 20px;
   flex-wrap: wrap;
 }
 
 .link-interno {
   font-family: var(--fonte-titulos);
-  font-size: 0.95rem;
+  font-size: 15.2px;
   font-weight: 700;
   color: #55393d;
   text-decoration: none;
-  padding: 0.55rem 1rem;
+  padding: 8.8px 16px;
   border-radius: 25px;
   display: inline-flex;
   align-items: center;
-  gap: 0.4rem;
+  gap: 6.4px;
   transition: all 0.25s ease;
 }
 
@@ -183,7 +183,7 @@ button {
   justify-content: center;
   background-color: var(--cor-primaria);
   color: #ffffff;
-  font-size: 0.75rem;
+  font-size: 12px;
   font-weight: 700;
   min-width: 20px;
   height: 20px;
@@ -201,7 +201,7 @@ button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.15rem;
+  font-size: 18.4px;
   cursor: pointer;
   box-shadow: 0 2px 8px var(--cor-sombra);
   transition: all 0.25s ease;
@@ -214,11 +214,11 @@ button {
 }
 
 .usuario-navbar {
-  font-size: 0.95rem;
+  font-size: 15.2px;
   font-weight: 700;
   color: var(--cor-texto-principal);
   background-color: var(--cor-rosa-suave);
-  padding: 0.45rem 1rem;
+  padding: 7.2px 16px;
   border-radius: 25px;
   border: 1px solid var(--cor-primaria-clara);
 }
@@ -227,7 +227,7 @@ button {
   background: transparent;
   border: 1.5px solid var(--cor-primaria);
   color: var(--cor-rosa-destaque);
-  padding: 0.45rem 1.1rem;
+  padding: 7.2px 17.6px;
   border-radius: 25px;
   font-weight: 700;
   cursor: pointer;
@@ -242,10 +242,10 @@ button {
 .botao-cadastro-navbar {
   background: var(--cor-primaria);
   color: #ffffff !important;
-  padding: 0.6rem 1.4rem;
+  padding: 9.6px 22.4px;
   border-radius: 30px;
   font-weight: 700;
-  font-size: 0.95rem;
+  font-size: 15.2px;
   text-decoration: none;
   box-shadow: 0 4px 14px var(--cor-sombra);
   transition: all 0.25s ease;
@@ -264,17 +264,17 @@ button {
 
 .cardapio-cabecalho {
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 32px;
 }
 
 .cardapio-cabecalho h1 {
   font-family: var(--fonte-cursiva);
-  font-size: 4rem;
+  font-size: 64px;
   font-weight: 400;
   line-height: 1.1;
   letter-spacing: 1px;
   color: var(--cor-texto-principal);
-  margin-bottom: 0.2rem;
+  margin-bottom: 3.2px;
   position: relative;
   display: inline-block;
 }
@@ -292,7 +292,7 @@ button {
 .cardapio-layout .cardapio {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
-  gap: 2rem;
+  gap: 32px;
   width: 100%;
 }
 
@@ -301,7 +301,7 @@ button {
   background: var(--cor-card-bg);
   border: 1.5px solid var(--cor-rosa-borda);
   border-radius: 20px;
-  padding: 1.4rem;
+  padding: 22.4px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -323,7 +323,7 @@ button {
   height: 200px;
   object-fit: cover;
   border-radius: 15px;
-  margin-bottom: 1.1rem;
+  margin-bottom: 17.6px;
   transition: transform 0.4s ease;
   background-color: var(--cor-rosa-suave);
 }
@@ -334,26 +334,26 @@ button {
 
 .produto h2 {
   font-family: var(--fonte-titulos);
-  font-size: 1.3rem;
+  font-size: 20.8px;
   font-weight: 700;
   color: var(--cor-texto-principal);
-  margin: 0.3rem 0;
+  margin: 4.8px 0;
   letter-spacing: 0.2px;
 }
 
 .produto p {
   font-family: var(--fonte-corpo);
-  font-size: 0.95rem;
+  font-size: 15.2px;
   color: var(--cor-texto-secundario);
-  margin: 0.2rem 0;
+  margin: 3.2px 0;
   line-height: 1.45;
 }
 
 .produto strong {
   font-family: var(--fonte-titulos);
   margin-top: auto;
-  padding-top: 1rem;
-  font-size: 1.35rem;
+  padding-top: 16px;
+  font-size: 21.6px;
   font-weight: 700;
   color: var(--cor-rosa-destaque);
 }
@@ -366,9 +366,9 @@ button {
 
 .cardapio .subtitulo {
   font-family: var(--fonte-corpo);
-  font-size: 1.15rem;
+  font-size: 18.4px;
   color: var(--cor-texto-secundario);
-  margin-bottom: 2rem;
+  margin-bottom: 32px;
   font-weight: 400;
 }
 
@@ -378,7 +378,7 @@ button {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 1.2rem;
+  gap: 19.2px;
   text-align: left;
 }
 
@@ -386,11 +386,11 @@ button {
   background: var(--cor-card-bg);
   border: 1.5px solid var(--cor-rosa-borda);
   border-radius: 18px;
-  padding: 1.25rem 1.6rem;
+  padding: 20px 25.6px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 1.5rem;
+  gap: 24px;
   box-shadow: 0 4px 14px var(--cor-sombra);
   transition: all 0.25s ease;
 }
@@ -414,7 +414,7 @@ button {
 .botao-favorito {
   background: transparent;
   border: none;
-  font-size: 1.6rem;
+  font-size: 25.6px;
   color: var(--cor-primaria-clara);
   cursor: pointer;
   line-height: 1;
@@ -440,33 +440,33 @@ button {
 
 .info-produto h3 {
   font-family: var(--fonte-titulos);
-  font-size: 1.25rem;
+  font-size: 20px;
   color: var(--cor-texto-principal);
   font-weight: 700;
-  margin: 0.2rem 0;
+  margin: 3.2px 0;
 }
 
 .info-produto p {
   font-family: var(--fonte-corpo);
   color: var(--cor-texto-secundario);
-  font-size: 0.95rem;
-  margin: 0.25rem 0;
+  font-size: 15.2px;
+  margin: 4px 0;
 }
 
 .info-produto .preco {
   font-family: var(--fonte-titulos);
   color: var(--cor-rosa-destaque);
-  font-size: 1.2rem;
+  font-size: 19.2px;
   font-weight: 700;
-  margin-top: 0.4rem;
+  margin-top: 6.4px;
 }
 
 .controle-quantidade {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
+  gap: 12px;
   background-color: var(--cor-rosa-suave);
-  padding: 0.4rem 0.8rem;
+  padding: 6.4px 12.8px;
   border-radius: 35px;
   border: 1px solid var(--cor-primaria-clara);
 }
@@ -478,7 +478,7 @@ button {
   border: none;
   background-color: var(--cor-primaria);
   color: #ffffff;
-  font-size: 1.1rem;
+  font-size: 17.6px;
   font-weight: bold;
   cursor: pointer;
   display: inline-flex;
@@ -495,7 +495,7 @@ button {
 .controle-quantidade span {
   font-family: var(--fonte-titulos);
   font-weight: 700;
-  font-size: 1.1rem;
+  font-size: 17.6px;
   color: var(--cor-texto-principal);
   min-width: 24px;
   text-align: center;
@@ -503,13 +503,13 @@ button {
 
 .botao-finalizar {
   display: inline-block;
-  margin: 2.5rem auto 1rem;
-  padding: 0.95rem 3rem;
+  margin: 40px auto 16px;
+  padding: 15.2px 48px;
   background-color: var(--cor-primaria);
   color: #ffffff;
   border: none;
   border-radius: 50px;
-  font-size: 1.1rem;
+  font-size: 17.6px;
   font-weight: 700;
   cursor: pointer;
   box-shadow: 0 6px 20px var(--cor-sombra);
@@ -531,13 +531,13 @@ button {
 
 .resumo-pedido {
   max-width: 480px;
-  margin: 1.5rem auto;
+  margin: 24px auto;
   background: var(--cor-rosa-suave);
   border: 1.5px dashed var(--cor-primaria);
   color: var(--cor-texto-principal);
-  padding: 1.1rem 1.6rem;
+  padding: 17.6px 25.6px;
   border-radius: 16px;
-  font-size: 1.05rem;
+  font-size: 16.8px;
 }
 
 .resumo-pedido strong {
@@ -547,26 +547,26 @@ button {
 /* Favoritos */
 .favoritos-vazio {
   max-width: 520px;
-  margin: 3.5rem auto;
+  margin: 56px auto;
   background: var(--cor-card-bg);
   border: 2px dashed var(--cor-primaria-clara);
   border-radius: 20px;
-  padding: 3rem 2rem;
+  padding: 48px 32px;
   text-align: center;
   box-shadow: 0 6px 20px var(--cor-sombra);
 }
 
 .favoritos-vazio p {
   color: var(--cor-texto-secundario);
-  font-size: 1.15rem;
-  margin-bottom: 1.8rem;
+  font-size: 18.4px;
+  margin-bottom: 28.8px;
 }
 
 .favoritos-vazio a {
   display: inline-block;
   background: var(--cor-primaria);
   color: #ffffff;
-  padding: 0.85rem 2rem;
+  padding: 13.6px 32px;
   border-radius: 30px;
   text-decoration: none;
   font-weight: 700;
@@ -581,17 +581,17 @@ button {
 .lista-favoritos {
   list-style: none;
   max-width: 720px;
-  margin: 2rem auto;
+  margin: 32px auto;
   display: flex;
   flex-direction: column;
-  gap: 1.1rem;
+  gap: 17.6px;
 }
 
 .item-favorito {
   background: var(--cor-card-bg);
   border: 1.5px solid var(--cor-rosa-borda);
   border-radius: 16px;
-  padding: 1.25rem 1.8rem;
+  padding: 20px 28.8px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -606,7 +606,7 @@ button {
 
 .item-favorito a {
   font-family: var(--fonte-titulos);
-  font-size: 1.15rem;
+  font-size: 18.4px;
   font-weight: 700;
   color: var(--cor-texto-principal);
   text-decoration: none;
@@ -618,14 +618,14 @@ button {
 
 .preco-favorito {
   font-family: var(--fonte-titulos);
-  font-size: 1.15rem;
+  font-size: 18.4px;
   font-weight: 700;
   color: var(--cor-rosa-destaque);
 }
 
 .lista-favoritos > a {
   align-self: center;
-  margin-top: 1.5rem;
+  margin-top: 24px;
   color: var(--cor-rosa-destaque);
   font-weight: 700;
   text-decoration: none;
@@ -637,11 +637,11 @@ button {
 
 /* Autenticação: Login e Cadastro */
 .auth-container {
-  min-height: calc(100vh - 240px);
+  min-height: 660px; /* Convertido de calc(100vh - 240px) com base em 900px */
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 2.5rem 1rem;
+  padding: 40px 16px;
   width: 100%;
 }
 
@@ -649,7 +649,7 @@ button {
   background: var(--cor-card-bg);
   border: 1.5px solid var(--cor-primaria-clara);
   border-radius: 24px;
-  padding: 2.8rem 2.4rem;
+  padding: 44.8px 38.4px;
   width: 100%;
   max-width: 440px;
   box-shadow: 0 12px 36px var(--cor-sombra);
@@ -658,42 +658,42 @@ button {
 
 .auth-box h1 {
   font-family: var(--fonte-marca);
-  font-size: 2.2rem;
+  font-size: 35.2px;
   font-weight: 700;
   color: var(--cor-rosa-destaque);
   text-align: center;
-  margin-bottom: 0.2rem;
+  margin-bottom: 3.2px;
   line-height: 1.2;
 }
 
 .auth-box h2 {
   font-family: var(--fonte-titulos);
-  font-size: 1.3rem;
+  font-size: 20.8px;
   color: var(--cor-texto-principal);
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 32px;
   font-weight: 700;
 }
 
 .auth-box form {
   display: flex;
   flex-direction: column;
-  gap: 1.1rem;
+  gap: 17.6px;
 }
 
 .auth-box label {
-  font-size: 0.95rem;
+  font-size: 15.2px;
   font-weight: 700;
   color: var(--cor-texto-secundario);
-  margin-bottom: -0.5rem;
+  margin-bottom: -8px;
 }
 
 .auth-box input {
   width: 100%;
-  padding: 0.85rem 1.15rem;
+  padding: 13.6px 18.4px;
   border: 1.5px solid var(--cor-rosa-borda);
   border-radius: 12px;
-  font-size: 0.98rem;
+  font-size: 15.68px;
   font-family: inherit;
   color: var(--cor-texto-principal);
   background: #ffffff;
@@ -707,14 +707,14 @@ button {
 }
 
 .botao-auth {
-  margin-top: 0.8rem;
+  margin-top: 12.8px;
   width: 100%;
-  padding: 0.95rem;
+  padding: 15.2px;
   background: var(--cor-primaria);
   color: #ffffff;
   border: none;
   border-radius: 30px;
-  font-size: 1.05rem;
+  font-size: 16.8px;
   font-weight: 700;
   cursor: pointer;
   box-shadow: 0 4px 16px var(--cor-sombra);
@@ -728,20 +728,20 @@ button {
 }
 
 .mensagem-erro {
-  margin-top: 1.2rem;
+  margin-top: 19.2px;
   background: #ffebeb;
   border: 1px solid #ffd0d0;
   color: #cc4845;
-  padding: 0.8rem 1rem;
+  padding: 12.8px 16px;
   border-radius: 10px;
-  font-size: 0.9rem;
+  font-size: 14.4px;
   text-align: center;
 }
 
 .auth-link {
-  margin-top: 1.8rem;
+  margin-top: 28.8px;
   text-align: center;
-  font-size: 0.95rem;
+  font-size: 15.2px;
   color: var(--cor-texto-secundario);
 }
 
@@ -759,17 +759,17 @@ button {
 /* Carrinho de Compras */
 .container-carrinho {
   width: 100%;
-  min-height: calc(100vh - 200px);
+  min-height: 700px; /* Convertido de calc(100vh - 200px) com base em 900px */
   background-color: transparent !important;
-  padding: 1.5rem 0;
+  padding: 24px 0;
   display: grid;
   grid-template-columns: 1fr;
-  gap: 2rem;
+  gap: 32px;
 }
 
 @media (min-width: 820px) {
   .container-carrinho {
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 800px 400px;
     align-items: start;
   }
   .layout {
@@ -779,10 +779,10 @@ button {
 
 .layout h2 {
   font-family: var(--fonte-titulos);
-  font-size: 2rem;
+  font-size: 32px;
   font-weight: 700;
   color: var(--cor-texto-principal);
-  margin-bottom: 1.5rem;
+  margin-bottom: 24px;
   text-align: left;
 }
 
@@ -791,7 +791,7 @@ button {
   overflow-x: auto;
   background: var(--cor-card-bg);
   border-radius: 18px;
-  padding: 1.5rem;
+  padding: 24px;
   border: 1.5px solid var(--cor-rosa-borda);
   box-shadow: 0 6px 20px var(--cor-sombra);
 }
@@ -806,7 +806,7 @@ button {
   padding: 14px 18px;
   font-weight: 700;
   text-transform: uppercase;
-  font-size: 0.85rem;
+  font-size: 13.6px;
   letter-spacing: 0.06em;
   color: var(--cor-texto-secundario);
   border-bottom: 2px solid var(--cor-rosa-suave);
@@ -816,7 +816,7 @@ button {
   padding: 18px;
   color: var(--cor-texto-principal);
   border-bottom: 1px solid var(--cor-rosa-suave);
-  font-size: 1.05rem;
+  font-size: 16.8px;
 }
 
 .sumario-carrinho {
@@ -826,10 +826,10 @@ button {
 .resumo {
   border: 1.5px solid var(--cor-primaria-clara);
   border-radius: 18px;
-  padding: 1.8rem;
+  padding: 28.8px;
   display: flex;
   flex-direction: column;
-  gap: 1.3rem;
+  gap: 20.8px;
   background: var(--cor-card-bg);
   box-shadow: 0 6px 20px var(--cor-sombra);
 }
@@ -838,26 +838,26 @@ button {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 1rem;
+  font-size: 16px;
   color: var(--cor-texto-secundario);
 }
 
 .resumo-linha.total-linha {
-  font-size: 1.35rem;
+  font-size: 21.6px;
   font-weight: 700;
   color: var(--cor-texto-principal);
   border-top: 1.5px dashed var(--cor-primaria-clara);
-  padding-top: 1.2rem;
-  margin-top: 0.4rem;
+  padding-top: 19.2px;
+  margin-top: 6.4px;
 }
 
 .btn-finalizar,
 .btn-limpar {
   width: 100%;
-  padding: 0.95rem;
+  padding: 15.2px;
   border-radius: 30px;
   font-weight: 700;
-  font-size: 1rem;
+  font-size: 16px;
   cursor: pointer;
   transition: all 0.25s ease;
 }
@@ -892,25 +892,25 @@ button {
   background: var(--footer-bg);
   border-top: 3px solid var(--footer-borda);
   color: var(--footer-texto);
-  padding: 2.8rem 2rem;
+  padding: 44.8px 32px;
   text-align: center;
   position: relative;
 }
 
 .rodape-titulo {
   font-family: var(--fonte-marca);
-  font-size: 1.7rem;
+  font-size: 27.2px;
   font-weight: 700;
   line-height: 1.2;
   color: var(--footer-titulo, #ffc2c7);
-  margin-bottom: 0.8rem !important;
+  margin-bottom: 12.8px !important;
   letter-spacing: 0.5px;
 }
 
 .rodape p {
-  font-size: 0.95rem;
+  font-size: 15.2px;
   line-height: 1.6;
-  margin: 0.35rem 0;
+  margin: 5.6px 0;
   opacity: 0.95;
 }
 
@@ -980,22 +980,22 @@ body.tema-escuro .favoritos-vazio {
 /* Responsividade */
 @media (max-width: 768px) {
   .navbar {
-    padding: 1rem 1.25rem;
+    padding: 16px 20px;
     flex-direction: column;
-    gap: 1rem;
+    gap: 16px;
   }
   
   .navbar-links {
     justify-content: center;
-    gap: 0.6rem;
+    gap: 9.6px;
   }
   
   .conteudo {
-    padding: 1.5rem 1rem;
+    padding: 24px 16px;
   }
   
   .cardapio-cabecalho h1 {
-    font-size: 3rem;
+    font-size: 48px;
   }
   
   .item-cardapio {
@@ -1008,6 +1008,6 @@ body.tema-escuro .favoritos-vazio {
   }
   
   .auth-box {
-    padding: 2rem 1.4rem;
+    padding: 32px 22.4px;
   }
 }

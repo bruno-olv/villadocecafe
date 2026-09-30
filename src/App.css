@@ -2,7 +2,7 @@
 .container-carrinho {
   width: 100%;
   /* Ocupa a altura da tela descontando header e footer */
-  min-height: calc(100vh - 160px);
+  min-height: 740px;
   /* Fundo off-white bem suave preenchendo tudo */
   background-color: #FAF8F5;
   padding: 48px 32px;
