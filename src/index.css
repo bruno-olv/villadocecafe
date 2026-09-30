@@ -382,7 +382,7 @@ button {
   text-align: left;
 }
 
- .item-cardapio {
+.item-cardapio {
   background: var(--cor-card-bg);
   border: 1.5px solid var(--cor-rosa-borda);
   border-radius: 18px;
@@ -392,9 +392,7 @@ button {
   align-items: center;
   gap: 24px;
   box-shadow: 0 4px 14px var(--cor-sombra);
-  transition: all 0.25s ease;
-  width: 100%; /* Garante que ocupa a largura total disponível */
-  box-sizing: border-box;
+  width: 100%;
 }
 
 .item-cardapio:hover {
@@ -403,10 +401,18 @@ button {
   transform: translateY(-2px);
 }
 
+.item-cardapio img {
+  width: 150px; /* Define um tamanho fixo ou controlado para a imagem do produto no card */
+  height: 150px;
+  object-fit: cover;
+  border-radius: 12px;
+  flex-shrink: 0;
+}
+
 .info-produto {
   flex: 1;
   text-align: left;
-  min-width: 0; /* Impede que o texto estique para cima dos botões */
+  min-width: 0;
 }
 
 .titulo-favoritos {
