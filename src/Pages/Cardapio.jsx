@@ -1,6 +1,5 @@
-
 import { useState, useMemo } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { useFavoritos } from '../context/Favoritos';
 import cardapio from '../Data/Cardapio';
 
@@ -89,7 +88,9 @@ function Cardapio() {
                 </button>
               </div>
 
-              <h3>{produto.nome}</h3>
+              <Link to={`/cardapio/${produto.id}`}>
+                <h3>{produto.nome}</h3>
+              </Link>
 
               <p>{produto.quantidade}</p>
 
