@@ -382,7 +382,7 @@ button {
   text-align: left;
 }
 
-.item-cardapio {
+ .item-cardapio {
   background: var(--cor-card-bg);
   border: 1.5px solid var(--cor-rosa-borda);
   border-radius: 18px;
@@ -393,6 +393,8 @@ button {
   gap: 24px;
   box-shadow: 0 4px 14px var(--cor-sombra);
   transition: all 0.25s ease;
+  width: 100%; /* Garante que ocupa a largura total disponível */
+  box-sizing: border-box;
 }
 
 .item-cardapio:hover {
@@ -403,6 +405,7 @@ button {
 
 .info-produto {
   flex: 1;
+  min-width: 0; /* Impede que textos longos estiquem o elemento para fora */
 }
 
 .titulo-favoritos {
