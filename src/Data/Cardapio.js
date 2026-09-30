@@ -6,7 +6,7 @@
     descricao: '40ml',
     preco: 10.0,
     imagem:
-      'https://media.istockphoto.com/id/2162749083/pt/foto/cup-of-coffee-on-wooden-background-close-up-copy-space.jpg?s=612x612&w=0&k=20&c=_ciWSirFwq38ypE3Iomcz6lJnG9OV3kqXD1UObFJHjY=',
+      "https://media.istockphoto.com/id/2162749083/pt/foto/cup-of-coffee-on-wooden-background-close-up-copy-space.jpg?s=612x612&w=0&k=20&c=_ciWSirFwq38ypE3Iomcz6lJnG9OV3kqXD1UObFJHjY=",
   },
   {
     id: 2,
