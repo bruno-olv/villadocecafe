@@ -386,7 +386,7 @@ button {
   background: var(--cor-card-bg);
   border: 1.5px solid var(--cor-rosa-borda);
   border-radius: 18px;
-  padding: 20px 25.6px;
+  padding: 28px 32px; 
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -820,7 +820,7 @@ button {
   font-weight: 700;
   text-transform: uppercase;
   font-size: 13.6px;
-  letter-spacing: 0.06em;
+  letter-spacing: 1px;
   color: var(--cor-texto-secundario);
   border-bottom: 2px solid var(--cor-rosa-suave);
 }
