@@ -1,5 +1,5 @@
 import { useState, useMemo } from 'react';
-import { useFavoritos } from '../Context/Favoritos';
+import { useFavoritos } from '../context/Favoritos';
 import cardapio from '../Data/Cardapio';
 
 function Cardapio() {
