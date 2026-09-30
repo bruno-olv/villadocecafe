@@ -83,7 +83,7 @@
   },
   {
     id: 12,
-    nome: 'Suco de larenja',
+    nome: 'Suco de laranja',
     preco: 5.0,
     imagem: 'https://media.istockphoto.com/id/612385612/pt/foto/sumo-de-laranja.jpg?s=612x612&w=0&k=20&c=tWeChZRpESu82AlEAm6dc_vbdUIvFZ3Z7VXWd7UsFuc=',
   },
