@@ -1,11 +1,23 @@
+ import Expresso from '../assets/images/Expresso.jpg';
+import Macchiato from '../assets/images/Macchiato.jpg';
+import Capuccino from '../assets/images/Capuccino.jpg';
+import Latte from '../assets/images/Latte.jpg';
+import Descafeinado from '../assets/images/Descafeinado.jpg';
+import Bolodecenoura from '../assets/images/Bolodecenoura.jpg';
+import BoloRedVelvet from '../assets/images/BoloRedVelvet.jpg';
+import BolodeChocolate from '../assets/images/BolodeChocolate.jpg';
+import PaodeQueijo from '../assets/images/PaodeQueijo.jpg';
+import PaonaChapa from '../assets/images/PaonaChapa.jpg';
+import MistoQuente from '../assets/images/MistoQuente.jpg';
+import SucodeLaranja from '../assets/images/SucodeLaranja.jpg';
 
     const cardapio = [
   {
     id: 1,
-    nome: 'Espresso',
+    nome: 'Expresso',
     descricao: '40ml',
     preco: 10.0,
-    imagem: '/images/Expresso.jpg',
+    imagem: Expresso,
     },
   {
     id: 2,
@@ -13,14 +25,14 @@
     quantidade: '50ml',
     descricao: 'café com a crema do leite',
     preco: 11.0,
-    imagem: '/images/Macchiato.jpg', 
+    imagem: Macchiato, 
   },
   {
     id: 3,
     nome: 'Capuccino',
     quantidade: '100ml',
     preco: 15.0,
-    imagem: '/images/Capuccino.jpg',
+    imagem: Capuccino,
   },
   {
     id: 4,
@@ -28,63 +40,56 @@
     quantidade: '150ml',
     descricao: 'tradicional "café com leite" ',
     preco: 16.0,
-    imagem: '/images/Latte.jpg',
+    imagem: Latte,
   },
   {
     id: 5,
     nome: 'Descafeinado',
     quantidade: '40ml',
     preco: 12.0,
-    imagem:
-      'https://media.istockphoto.com/id/1388959658/pt/foto/coffee-and-dandelions-on-a-white-background.jpg?s=612x612&w=0&k=20&c=hTGEzmZqbicm7F6Lk5tUwYcOmygFmjqZeC2_7IPXoQg=',
+    imagem: Descafeinado,
   },
   {
     id: 6,
     nome: 'Fatia de bolo de cenoura',
     preco: 15.0,
-    imagem:
-      'https://media.istockphoto.com/id/1313708617/pt/foto/carrot-cake-with-chocolate-icing-brazilian-cake.jpg?s=612x612&w=0&k=20&c=Nq_F0zZcc5ttjD8zlYGccRlQ74zosatdd8DCCqvkmyI=',
+    imagem: Bolodecenoura,
   },
   {
     id: 7,
     nome: 'Fatia de bolo red velvet',
     preco: 15.0,
-    imagem:
-      'https://media.istockphoto.com/id/1014916124/pt/foto/red-velvet-cake.jpg?s=612x612&w=0&k=20&c=gOJpnofL5iUhiQkjadEoadK9hA8igXFXXehavIe0FyI=',
+    imagem: BoloRedVelvet,
   },
   {
     id: 8,
     nome: 'Fatia de bolo de chocolate',
     preco: 15.0,
-    imagem:
-      'https://media.istockphoto.com/id/868803926/pt/foto/chocolate-cake-on-wooden-table.jpg?s=612x612&w=0&k=20&c=7oYYthVHhkXpDwLlmLCh-POWHK8ZK-KFHhwO-rx37CM=',
+    imagem: BolodeChocolate,
   },
   {
     id: 9,
     nome: 'Pão de queijo',
     preco: 5.0,
-    imagem:
-      'https://media.istockphoto.com/id/1193388223/pt/foto/brazilian-snack-traditional-cheese-bread.jpg?s=612x612&w=0&k=20&c=WqZDdiS6lXNmwn17qCVzSukEnLPZ3pFuh4oVJEgD96M=',
+    imagem: PaodeQueijo,
   },
   {
     id: 10,
     nome: 'Pão na chapa',
     preco: 5.0,
-    imagem:
-      'https://media.istockphoto.com/id/1158395339/pt/foto/brazilian-breakfast-capuccino-cup-and-toasted-bread-with-butter-background.jpg?s=612x612&w=0&k=20&c=2n-59QXnMbkO0rTsFG9V6m5TqgPprvn-lowyDJI058I=',
+    imagem: PaonaChapa,
   },
   {
     id: 11,
     nome: 'Misto quente',
     preco: 5.0,
-    imagem:
-      'https://media.istockphoto.com/id/959576494/pt/foto/grilled-ham-and-cheese-sandwiches.jpg?s=612x612&w=0&k=20&c=cCkcACBt9kTnc-Aqa6uvVw8OCzPhmAeY_Wj9f1wQ6yM=',
+    imagem: MistoQuente,
   },
   {
     id: 12,
     nome: 'Suco de laranja',
     preco: 5.0,
-    imagem: 'https://media.istockphoto.com/id/612385612/pt/foto/sumo-de-laranja.jpg?s=612x612&w=0&k=20&c=tWeChZRpESu82AlEAm6dc_vbdUIvFZ3Z7VXWd7UsFuc=',
+    imagem: SucodeLaranja,
   },
 ];
 export default cardapio;
