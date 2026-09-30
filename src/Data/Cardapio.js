@@ -5,23 +5,22 @@
     nome: 'Espresso',
     descricao: '40ml',
     preco: 10.0,
-    imagem:
-      "https://media.istockphoto.com/id/2162749083/pt/foto/cup-of-coffee-on-wooden-background-close-up-copy-space.jpg?s=612x612&w=0&k=20&c=_ciWSirFwq38ypE3Iomcz6lJnG9OV3kqXD1UObFJHjY=",
-  },
+    imagem: '/images/Expresso.jpg',
+    },
   {
     id: 2,
     nome: 'Macchiato',
     quantidade: '50ml',
     descricao: 'café com a crema do leite',
     preco: 11.0,
-    imagem: 'https://media.istockphoto.com/id/1466271613/pt/foto/cup-of-hot-coffee-latte-on-a-wooden-table-morning-time.jpg?s=612x612&w=0&k=20&c=v7nio4LLgz_NrECzYSjlnX54Mb-cAlBNC4709vGuoys=', 
+    imagem: '/images/Macchiato.jpg', 
   },
   {
     id: 3,
     nome: 'Capuccino',
     quantidade: '100ml',
     preco: 15.0,
-    imagem: 'https://media.istockphoto.com/id/523168750/pt/foto/caf%C3%A9-com-gr%C3%A3os-de-caf%C3%A9-na-mesa-de-madeira.jpg?s=612x612&w=0&k=20&c=MRLSozTzhAVHWYziNJIA7FNxELtCGKSb0iWehHfWz0A=',
+    imagem: '/images/Capuccino.jpg',
   },
   {
     id: 4,
@@ -29,7 +28,7 @@
     quantidade: '150ml',
     descricao: 'tradicional "café com leite" ',
     preco: 16.0,
-    imagem: 'https://media.istockphoto.com/id/1212682428/pt/foto/breakfast-in-the-cafe-beautiful-blue-mug-with-cappuccino-or-latte-coffee-on-a-wooden-table.jpg?s=612x612&w=0&k=20&c=1FKURqbTADzjctBjIjWfqMiackbuFbMAJmliAjKMPrc=',
+    imagem: '/images/Latte.jpg',
   },
   {
     id: 5,
