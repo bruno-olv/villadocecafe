@@ -535,7 +535,7 @@ button {
   box-shadow: 0 8px 24px var(--cor-sombra-hover);
 }
 
-.botao-finalizar {
+.botao-finalizar:disabled {
   opacity: 0.45;
   cursor: not-allowed;
   transform: none;
