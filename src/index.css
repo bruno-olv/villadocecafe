@@ -279,7 +279,7 @@ button {
   display: inline-block;
 }
 
-.cardapio-cabecalho h1 {
+.cardapio-cabecalho h1::after {
   content: '';
   display: block;
   width: 70px;
