@@ -18,7 +18,7 @@ function DetalheProduto() {
 
   return (
     <div className="produto-detalhe">
-      <img src={produto.imagem} alt={`Produto ${produto.nome}`} />
+      <img src={produto.imagem} alt={`Produto ${produto.nome}`} className="imagem-detalhe" />
       <div className="titulo-com-favorito titulo-detalhe">
         <h2>{produto.nome}</h2>
 

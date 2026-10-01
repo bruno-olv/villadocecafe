@@ -88,7 +88,7 @@ function Cardapio() {
                 </button>
               </div>
 
-              <Link to={`/cardapio/${produto.id}`}>
+              <Link to={`/cardapio/${produto.id}`} className="link-produto">
                 <h3>{produto.nome}</h3>
               </Link>
 
