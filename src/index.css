@@ -279,7 +279,7 @@ button {
   display: inline-block;
 }
 
-.cardapio-cabecalho h1::after {
+.cardapio-cabecalho h1 {
   content: '';
   display: block;
   width: 70px;
@@ -465,17 +465,6 @@ button {
   margin: 4px 0;
 }
 
-.link-produto {
-  text-decoration: none;
-  color: inherit;
-  transition: all 0.25s ease;
-}
-
-.link-produto:hover h3 {
-  color: var(--cor-primaria);
-  text-decoration: underline;
-}
-
 .info-produto .preco {
   font-family: var(--fonte-titulos);
   color: var(--cor-rosa-destaque);
@@ -657,46 +646,6 @@ button {
 
 .lista-favoritos > a:hover {
   text-decoration: underline;
-}
-
-/* Detalhe do Produto */
-.produto-detalhe {
-  max-width: 700px;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  margin: 24px auto 0;
-  background: var(--cor-card-bg);
-  border: 1.5px solid var(--cor-rosa-borda);
-  border-radius: 20px;
-  padding: 20px;
-  box-shadow: 0 4px 14px var(--cor-sombra);
-  transition: all 0.25s ease;
-}
-
-.produto-detalhe:hover {
-  border-color: var(--cor-primaria);
-  box-shadow: 0 8px 22px var(--cor-sombra-hover);
-}
-
-.produto-detalhe img {
-  width: 100%;
-  max-width: 700px;
-  border-radius: 16px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-  display: block;
-  margin: 0 auto 24px;
-}
-
-.titulo-com-favorito{
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.produto-detalhe .link-voltar {
-  margin-top: 24px;
-  text-align: center;
 }
 
 /* Autenticação: Login e Cadastro */
