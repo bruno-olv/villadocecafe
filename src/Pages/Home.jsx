@@ -1,4 +1,3 @@
-
 import './Home.css';
 import Cafeteria3 from '../assets/images/Cafeteria3.jpeg';
 

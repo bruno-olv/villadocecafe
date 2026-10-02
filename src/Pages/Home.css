@@ -11,14 +11,12 @@ body {
     width: 100%;
     height: 520px;
     overflow: hidden;
-    background-color: var(--bg);
 }
-
 .hero-imagem {
     position: absolute;
     top: 0;
-    right: 0;
-    width: 67%;
+    left: 0;
+    width: 100%;
     height: 100%;
     z-index: 1;
 }
@@ -28,58 +26,58 @@ body {
     object-fit: cover;
     object-position: center;
 }
-
-.hero-imagem::before {
+/* Gradiente claro que cria a “parte em branco” */
+.hero-imagem::after {
     content: "";
     position: absolute;
-    left: -1px;
     top: 0;
-    width: 30%;
+    left: 0;
+    width: 58%;
     height: 100%;
-    z-index: 2;
     background: linear-gradient(
         to right,
-        var(--bg) 0%,
-        color-mix(in srgb, var(--bg) 85%, transparent) 25%,
-        color-mix(in srgb, var(--bg) 40%, transparent) 60%,
+        rgba(250, 248, 243, 0.96) 0%,
+        rgba(250, 248, 243, 0.88) 25%,
+        rgba(250, 248, 243, 0.65) 45%,
+        rgba(250, 248, 243, 0.35) 65%,
+        rgba(250, 248, 243, 0.12) 82%,
         transparent 100%
     );
+    z-index: 2;
 }
 .hero-texto {
     position: relative;
     z-index: 3;
-    width: 47%;
+    width: 48%;
     height: 100%;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding-left: 7%;
-    padding-right: 5%;
-    background-color: var(--bg);
-}
-
-/* ÁREA DE INTRODUÇÃO (Home) */
-.introducao-texto {
-    text-align: center;
-    padding: 40px 0;
+    padding-right: 4%;
+    /* sem background-color aqui */
 }
 h1.text1 {
-    margin-top: 50px;
+    margin-top: 0;
     font-size: 36px;
-    color: var(--text-h);
+    color: #3a2f1e;           /* cor escura para contraste com o fundo claro */
     margin-bottom: 12px;
+    line-height: 1.25;
+    font-weight: 500;
 }
 p.paragrafo1 {
-    margin-top: 0px;
-    color: var(--text);
-    font-size: 18px;
+    margin-top: 0;
+    color: #221a0d;
+    font-size: 17px;
+    line-height: 1.6;
+    max-width: 420px;
 }
 .barrinha {
-    width: 60px;
-    height: 4px;
-    background-color: var(--accent);
-    margin: 15px auto;
+    width: 55px;
+    height: 3px;
+    background-color: #c9a86c; /* dourado suave como na referência */
+    margin: 18px 0 22px 0;     /* alinhado à esquerda */
     border-radius: 2px;
 }
 /* SEÇÕES DOS PRODUTOS (Home) */
