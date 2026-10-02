@@ -144,3 +144,8 @@
 .btn-limpar:hover {
     background-color: #FFF0F0;
 }
+
+.btn-finalizar:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}

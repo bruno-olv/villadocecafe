@@ -8,6 +8,7 @@ function Carrinho() {
     const navigate = useNavigate();
 
     const itens = location.state?.itens || [];
+    const carrinhoVazio = itens.length === 0;
 
     // 2. Cálculo do total usando JavaScript puro
     const total = itens.reduce((soma, item) => soma + (item.preco * item.quantidade), 0)
@@ -32,6 +33,15 @@ function Carrinho() {
                 {/* Grid que organiza a tabela e o resumo lado a lado */}
                 <div className="grid-carrinho">
                     <div className="conteudo-carrinho">
+                        {carrinhoVazio && (
+                          <p role="status">
+                           Seu carrinho está vazio.
+                            {' '}
+          <button onClick={() => navigate('/cardapio')}>
+            Ver cardápio
+        </button>
+    </p>
+)}
                         <table className="tabela-carrinho">
                             <thead>
                                 <tr>
@@ -72,6 +82,7 @@ function Carrinho() {
                             <button
                             className="btn-finalizar"
                             onClick={finalizarCompra}
+                            disabled={carrinhoVazio}
                                 >
                             Finalizar Compra
                             </button>
