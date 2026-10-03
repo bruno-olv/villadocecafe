@@ -5,10 +5,9 @@ function Home() {
   return (
     <main>
 
-      {/*INTRODUÇÃO / HERO*/}
-      <section className="hero-home">
+       <section className="hero-home">
 
-        {/* IMAGEM DO LADO DIREITO */}
+        {/* ÁREA DA IMAGEM */}
         <div className="hero-imagem">
           <img
             src={Cafeteria3}
@@ -16,8 +15,8 @@ function Home() {
           />
         </div>
 
-        {/* ÁREA CLARA DO LADO ESQUERDO */}
-        <div className="hero-texto">
+        {/* ÁREA DO TEXTO */}
+        <div className="hero-conteudo">
 
           <h1 className="text1">
             Sabores, História e
@@ -31,8 +30,8 @@ function Home() {
 
           <p className="paragrafo1">
             Desde o primeiro grão, a Villa Doce Café
-            transforma tradição, aconchego e memória
-            em momentos especiais no coração da cidade.
+            transforma tradição, aconchego e memória em
+            momentos especiais no coração da cidade.
           </p>
 
         </div>
