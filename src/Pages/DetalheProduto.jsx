@@ -1,6 +1,7 @@
 import { useParams, Link } from 'react-router-dom';
 import cardapio from '../data/Cardapio';
 import { useFavoritos } from '../context/Favoritos';
+import './DetalheProduto.css';
 
 function DetalheProduto() {
   const { id } = useParams();
@@ -37,6 +38,10 @@ function DetalheProduto() {
           }
         >
           {ehFavorito(produto.id) ? '♥' : '♡'}
+        </button>
+
+        <button className="botao-comprar">
+          Adicionar ao carrinho
         </button>
       </div>
       <p className="descricao-detalhe">{produto.descricao}</p>

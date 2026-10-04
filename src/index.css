@@ -465,6 +465,17 @@ button {
   margin: 4px 0;
 }
 
+.link-produto {
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.25s ease;
+}
+
+.link-produto:hover h3 {
+  color: var(--cor-primaria);
+  text-decoration: underline;
+}
+
 .info-produto .preco {
   font-family: var(--fonte-titulos);
   color: var(--cor-rosa-destaque);
