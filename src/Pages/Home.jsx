@@ -2,13 +2,15 @@ import './Home.css';
 import { Link } from 'react-router-dom';
 import Cafeteria3 from '../assets/images/Cafeteria3.jpeg';
 import NossoCafe from '../assets/images/NossoCafe.jpg'
+import BebidasEspeciais from '../assets/images/BebidasEspeciais.jpg'
+import CafedaManha from '../assets/images/Tradicional.jpg'
 import cardapio from '../Data/Cardapio';
 
 function Home() {
 
   // Produtos dos "Mais pedidos"
   const maisPedidos = cardapio.filter((produto) =>
-    [3, 6, 4].includes(produto.id)
+    [4, 6, 3].includes(produto.id)
   );
   return (
     <main>
@@ -114,9 +116,8 @@ function Home() {
 
           <img
             src={NossoCafe}
-            width={290}
             alt="Nossocafe"
-            className="NossoCafe-foto"
+            className="primeira-foto"
           />
         </div>
 
@@ -142,9 +143,9 @@ function Home() {
         <div className="container-foto">
 
           <img
-            src={Cafeteria3}
-            alt="Interior da Villa Doce Café"
-            className="primeira-foto"
+            src={BebidasEspeciais}
+            alt="Bebidas"
+            className="segunda-foto"
           />
         </div>
 
@@ -170,8 +171,13 @@ function Home() {
       </section>
 
       <section className="terceira-section">
-
         <div className="container-foto">
+
+           <img
+            src={CafedaManha}
+            alt="Cafedamanha"
+            className="terceira-foto"
+          />
         </div>
 
         <div className="container-texto-esquerdo">

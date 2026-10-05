@@ -319,14 +319,14 @@ p.paragrafo1 {
     margin-top: 10px;
     display: block;
 }
-
 /* ESTILO DAS FOTOS */
 img.primeira-foto,
 img.segunda-foto,
 img.terceira-foto {
     width: 100%;
+    max-width: 7;
     height: auto;
-    aspect-ratio: 4 / 3;
+    aspect-ratio: 16 / 18;
     object-fit: cover;
     border: 1px solid var(--border);
     border-radius: 8px;
@@ -339,10 +339,12 @@ img.primeira-foto {
 
 img.segunda-foto {
     object-position: center 60%;
+    aspect-ratio: 20 / 14;
 }
 
 img.terceira-foto {
     object-position: center 38%;
+    aspect-ratio: 22 / 14;
 }
 
 /* FOOTER */
