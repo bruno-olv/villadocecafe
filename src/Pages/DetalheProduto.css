@@ -38,18 +38,60 @@
   color: white;
   border: none;
   padding: 12px 24px;
-  border-radius: 8px;
-  font-weight: 600;
+  border-radius: 30px;
+  font-weight: 700;
   cursor: pointer;
   width: fit-content;
-  margin-left: auto;
+  box-shadow: 0 4px 14px var(--cor-sombra);
 }
 
 .botao-comprar:hover {
   background: var(--cor-primaria-hover, var(--cor-primaria));
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px var(--cor-sombra-hover);
+}
+
+.titulo-detalhe h2 {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.descricao-detalhe {
+  font-size: 16.8px;
+  line-height: 1.5;
+  color: var(--cor-texto-secundario);
+}
+
+.tamanho-detalhe {
+  font-size: 14.4px;
+  font-weight: 700;
+  color: var(--cor-texto-secundario);
+}
+
+.preco-detalhe {
+  font-family: var(--fonte-titulos);
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--cor-rosa-destaque);
+}
+
+.acoes-detalhe {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 12px;
 }
 
 .produto-detalhe .link-voltar {
   margin-top: 24px;
   text-align: center;
+  color: var(--cor-rosa-destaque);
+  font-weight: 700;
+  text-decoration: none;
 }
+
+.produto-detalhe .link-voltar:hover {
+  text-decoration: underline;
+}

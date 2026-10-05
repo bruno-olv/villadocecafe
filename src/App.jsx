@@ -13,6 +13,7 @@ import DetalheProduto from './Pages/DetalheProduto'
 import './App.css'
 import Home from './Pages/Home'
 import './Pages/Home.css'
+import { CarrinhoProvider } from './Context/CarrinhoContext'
 
 function App() {
   const [usuarioLogado, setUsuarioLogado] = useState(() => {
@@ -31,19 +32,21 @@ function App() {
   return (
     <ThemeProvider>
       <FavoritosProvider>
-        <BrowserRouter>
-          <Routes>
-            <Route element={<Layout usuarioLogado={usuarioLogado} fazerLogout={fazerLogout} />}>
-              <Route index element={<Home />} />
-              <Route path="cardapio" element={<Cardapio />} />
-              <Route path="cardapio/:id" element={<DetalheProduto />} />
-              <Route path="cardapio/favoritos" element={<ListaFavoritos />} />
-              <Route path="login" element={<Login aoLogar={setUsuarioLogado} />} />
-              <Route path="cadastro" element={<Cadastro />} />
-              <Route path="carrinho" element={<Carrinho />} />
-            </Route>
-          </Routes>
-        </BrowserRouter>
+        <CarrinhoProvider>
+          <BrowserRouter>
+            <Routes>
+              <Route element={<Layout usuarioLogado={usuarioLogado} fazerLogout={fazerLogout} />}>
+                <Route index element={<Home />} />
+                <Route path="cardapio" element={<Cardapio />} />
+                <Route path="cardapio/:id" element={<DetalheProduto />} />
+                <Route path="cardapio/favoritos" element={<ListaFavoritos />} />
+                <Route path="login" element={<Login aoLogar={setUsuarioLogado} />} />
+                <Route path="cadastro" element={<Cadastro />} />
+                <Route path="carrinho" element={<Carrinho />} />
+              </Route>
+            </Routes>
+          </BrowserRouter>
+        </CarrinhoProvider>
       </FavoritosProvider>
     </ThemeProvider>
   )
