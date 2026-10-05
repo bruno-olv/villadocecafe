@@ -280,7 +280,6 @@ button {
 }
 
 .cardapio-cabecalho h1 {
-  content: '';
   display: block;
   width: 70px;
   height: 3px;
@@ -1084,4 +1083,4 @@ body.tema-escuro .favoritos-vazio {
   .auth-box {
     padding: 32px 22.4px;
   }
-}
+}
