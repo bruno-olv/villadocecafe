@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom"
-import { useFavoritos } from '../context/Favoritos'
-import { useTheme } from '../context/Theme'
+import { useFavoritos } from '../Context/Favoritos'
+import { useTheme } from '../Context/Theme'
 import CartIcon from "./CartIcon"
 
 function Navbar({ usuarioLogado, fazerLogout }) {
@@ -29,7 +29,7 @@ function Navbar({ usuarioLogado, fazerLogout }) {
 
         <NavLink to="/cardapio" className={estiloLink}>
           Cardápio
-           {favoritos.length > 0 && (
+          {favoritos.length > 0 && (
             <span className="contador-favoritos">{favoritos.length}</span>
           )}
         </NavLink>
@@ -44,7 +44,7 @@ function Navbar({ usuarioLogado, fazerLogout }) {
           className="botao-tema"
           aria-label={tema === "claro" ? "Ativar modo escuro" : "Ativar modo claro"}
         >
-          {tema === "claro" ? "🌙" : "☀️"} 
+          {tema === "claro" ? "🌙" : "☀️"}
         </button>
 
         {usuarioLogado ? (

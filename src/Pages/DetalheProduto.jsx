@@ -1,6 +1,6 @@
 import { useParams, Link } from 'react-router-dom';
-import cardapio from '../data/Cardapio';
-import { useFavoritos } from '../context/Favoritos';
+import cardapio from '../Data/Cardapio';
+import { useFavoritos } from '../Context/Favoritos';
 import './DetalheProduto.css';
 
 function DetalheProduto() {

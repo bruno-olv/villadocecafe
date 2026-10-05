@@ -1,6 +1,6 @@
 import { useState, useMemo } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
-import { useFavoritos } from '../context/Favoritos';
+import { useFavoritos } from '../Context/Favoritos';
 import cardapio from '../Data/Cardapio';
 
 function Cardapio() {
@@ -36,20 +36,20 @@ function Cardapio() {
     );
   }, [quantidades]);
 
- function finalizarPedido() {
-  const itensSelecionados = cardapio
-    .filter((produto) => quantidades[produto.id] > 0)
-    .map((produto) => ({
-      ...produto,
-      quantidade: quantidades[produto.id],
-    }));
+  function finalizarPedido() {
+    const itensSelecionados = cardapio
+      .filter((produto) => quantidades[produto.id] > 0)
+      .map((produto) => ({
+        ...produto,
+        quantidade: quantidades[produto.id],
+      }));
 
-  navigate('/carrinho', {
-    state: {
-      itens: itensSelecionados,
-    },
-  });
-}
+    navigate('/carrinho', {
+      state: {
+        itens: itensSelecionados,
+      },
+    });
+  }
 
   return (
     <div className="cardapio">
