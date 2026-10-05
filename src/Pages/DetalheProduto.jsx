@@ -1,11 +1,26 @@
-import { useParams, Link } from 'react-router-dom';
-import cardapio from '../data/Cardapio';
-import { useFavoritos } from '../context/Favoritos';
+import { useState } from 'react';
+import { useParams, Link, useNavigate } from 'react-router-dom';
+import cardapio from '../Data/Cardapio';
+import { useFavoritos } from '../Context/Favoritos';
+import './DetalheProduto.css';
+import { useCarrinho } from '../Context/CarrinhoContext';
 
 function DetalheProduto() {
   const { id } = useParams();
   const produto = cardapio.find((item) => item.id === Number(id));
   const { ehFavorito, alternarFavorito } = useFavoritos();
+  const [quantidade, setQuantidade] = useState(0);
+  const { adicionarItem } = useCarrinho();
+  const navigate = useNavigate();
+
+  function alterarQuantidade(delta) {
+    setQuantidade((quantidadeAtual) => Math.max(0, quantidadeAtual + delta));
+  }
+
+  function adicionarAoCarrinho() {
+    adicionarItem(produto, quantidade);
+    navigate('/carrinho');
+  }
 
   if (!produto) {
     return (
@@ -39,8 +54,35 @@ function DetalheProduto() {
           {ehFavorito(produto.id) ? '♥' : '♡'}
         </button>
       </div>
-      <p className="descricao-detalhe">{produto.descricao}</p>
+
+      {produto.descricao && (
+        <p className="descricao-detalhe">{produto.descricao}</p>
+      )}
+
+      {produto.quantidade && (
+        <p className="tamanho-detalhe">{produto.quantidade}</p>
+      )}
+
       <p className="preco-detalhe">R$ {produto.preco.toFixed(2)}</p>
+
+      <div className="acoes-detalhe">
+        <div className="controle-quantidade">
+          <button type="button" onClick={() => alterarQuantidade(-1)}>
+            −
+          </button>
+
+          <span>{quantidade}</span>
+
+          <button type="button" onClick={() => alterarQuantidade(1)}>
+            +
+          </button>
+        </div>
+
+        <button className="botao-comprar" onClick={adicionarAoCarrinho}>
+          Adicionar ao carrinho
+        </button>
+      </div>
+
       <Link to="/cardapio" className="link-voltar">
         Voltar para o cardápio
       </Link>

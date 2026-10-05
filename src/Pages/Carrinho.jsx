@@ -1,30 +1,23 @@
-import { useState } from "react";
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import { useCarrinho } from '../Context/CarrinhoContext';
 import './Carrinho.css'
 
 function Carrinho() {
 
-    const location = useLocation();
     const navigate = useNavigate();
+    const { itens, limparCarrinho } = useCarrinho();
 
-    const itens = location.state?.itens || [];
     const carrinhoVazio = itens.length === 0;
 
     // 2. Cálculo do total usando JavaScript puro
     const total = itens.reduce((soma, item) => soma + (item.preco * item.quantidade), 0)
 
     function finalizarCompra() {
-    alert('Compra finalizada com sucesso!');
-    navigate('/cardapio');
+        alert('Compra finalizada com sucesso!');
+        limparCarrinho();
+        navigate('/cardapio');
     }
-            function limparCarrinho() {
-            navigate('/carrinho', {
-             state: {
-             itens: [],
-                     },
-             replace: true,
-              });
-                }
+
     return (
         <section className="container-carrinho">
             <div className="layout-carrinho">
@@ -34,14 +27,16 @@ function Carrinho() {
                 <div className="grid-carrinho">
                     <div className="conteudo-carrinho">
                         {carrinhoVazio && (
-                          <p role="status">
-                           Seu carrinho está vazio.
-                            {' '}
-          <button onClick={() => navigate('/cardapio')}>
-            Ver cardápio
-        </button>
-    </p>
-)}
+                            <p role="status" className="carrinho-vazio">
+                                Seu carrinho está vazio.
+                                {' '}
+                                <button
+                                    className="botao-ver-cardapio"
+                                    onClick={() => navigate('/cardapio')}>
+                                    Ver cardápio
+                                </button>
+                            </p>
+                        )}
                         <table className="tabela-carrinho">
                             <thead>
                                 <tr>
@@ -80,17 +75,17 @@ function Carrinho() {
                                 <span>R$ {total.toFixed(2)}</span>
                             </div>
                             <button
-                            className="btn-finalizar"
-                            onClick={finalizarCompra}
-                            disabled={carrinhoVazio}
-                                >
-                            Finalizar Compra
+                                className="btn-finalizar"
+                                onClick={finalizarCompra}
+                                disabled={carrinhoVazio}
+                            >
+                                Finalizar Compra
                             </button>
 
                             <button className="btn-limpar"
-                            onClick={limparCarrinho}>
+                                onClick={limparCarrinho}>
                                 Limpar carrinho
-                                </button>
+                            </button>
                         </div>
                     </div>
                 </div>

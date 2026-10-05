@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import cardapio from '../Data/Cardapio';
-import { useFavoritos } from '../context/Favoritos';
+import { useFavoritos } from '../Context/Favoritos';
 
 function Favoritos() {
   const { favoritos } = useFavoritos();

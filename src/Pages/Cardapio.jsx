@@ -1,11 +1,13 @@
 import { useState, useMemo } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
-import { useFavoritos } from '../context/Favoritos';
+import { useFavoritos } from '../Context/Favoritos';
 import cardapio from '../Data/Cardapio';
+import { useCarrinho } from '../Context/CarrinhoContext';
 
 function Cardapio() {
   const [quantidades, setQuantidades] = useState({});
   const { ehFavorito, alternarFavorito } = useFavoritos();
+  const { adicionarItem } = useCarrinho();
 
   const navigate = useNavigate();
 
@@ -36,20 +38,13 @@ function Cardapio() {
     );
   }, [quantidades]);
 
- function finalizarPedido() {
-  const itensSelecionados = cardapio
-    .filter((produto) => quantidades[produto.id] > 0)
-    .map((produto) => ({
-      ...produto,
-      quantidade: quantidades[produto.id],
-    }));
+  function finalizarPedido() {
+    cardapio
+      .filter((produto) => quantidades[produto.id] > 0)
+      .forEach((produto) => adicionarItem(produto, quantidades[produto.id]));
 
-  navigate('/carrinho', {
-    state: {
-      itens: itensSelecionados,
-    },
-  });
-}
+    navigate('/carrinho');
+  }
 
   return (
     <div className="cardapio">
@@ -57,88 +52,99 @@ function Cardapio() {
         Escolha seu pedido e a quantidade desejada
       </p>
 
-      <ul className="lista-cardapio">
-        {cardapio.map((produto) => (
-          <li key={produto.id} className="item-cardapio">
+      <div className="cardapio-conteudo">
+        <ul className="lista-cardapio">
+          {cardapio.map((produto) => (
+            <li key={produto.id} className="item-cardapio">
 
-            <img
-              src={produto.imagem}
-              alt={produto.nome}
-              className="imagem-produto"
-            />
+              <img
+                src={produto.imagem}
+                alt={produto.nome}
+                className="imagem-produto"
+              />
 
-            <div className="info-produto">
+              <div className="info-produto">
 
-              <div className="titulo-favoritos">
+                <div className="titulo-favoritos">
+                  <button
+                    type="button"
+                    className={
+                      ehFavorito(produto.id)
+                        ? 'botao-favorito botao-favorito-ativo'
+                        : 'botao-favorito'
+                    }
+                    onClick={() => alternarFavorito(produto.id)}
+                    aria-label={
+                      ehFavorito(produto.id)
+                        ? 'Remover dos favoritos'
+                        : 'Marcar como favorito'
+                    }
+                  >
+                    {ehFavorito(produto.id) ? '♥' : '♡'}
+                  </button>
+                </div>
+
+                <Link to={`/cardapio/${produto.id}`} className="link-produto">
+                  <h3>{produto.nome}</h3>
+                </Link>
+
+                {produto.descricao && (
+                  <p className="descricao-produto">{produto.descricao}</p>
+                )}
+
+                {produto.quantidade && (
+                  <p className="quantidade-produto">{produto.quantidade}</p>
+                )}
+
+                <p className="preco">
+                  R$ {produto.preco.toFixed(2)}
+                </p>
+              </div>
+
+              <div className="controle-quantidade">
                 <button
-                  type="button"
-                  className={
-                    ehFavorito(produto.id)
-                      ? 'botao-favorito botao-favorito-ativo'
-                      : 'botao-favorito'
-                  }
-                  onClick={() => alternarFavorito(produto.id)}
-                  aria-label={
-                    ehFavorito(produto.id)
-                      ? 'Remover dos favoritos'
-                      : 'Marcar como favorito'
-                  }
+                  onClick={() => alterarQuantidade(produto.id, -1)}
                 >
-                  {ehFavorito(produto.id) ? '♥' : '♡'}
+                  −
+                </button>
+
+                <span>
+                  {quantidades[produto.id] || 0}
+                </span>
+
+                <button
+                  onClick={() => alterarQuantidade(produto.id, 1)}
+                >
+                  +
                 </button>
               </div>
 
-              <Link to={`/cardapio/${produto.id}`} className="link-produto">
-                <h3>{produto.nome}</h3>
-              </Link>
+            </li>
+          ))}
+        </ul>
 
-              <p>{produto.quantidade}</p>
+        <aside className="painel-pedido">
+          <h3>Seu pedido</h3>
 
-              <p className="preco">
-                R$ {produto.preco.toFixed(2)}
-              </p>
-            </div>
+          <div className="resumo-linha">
+            <span>Unidades</span>
+            <span>{quantidadeTotalItens}</span>
+          </div>
 
-            <div className="controle-quantidade">
-              <button
-                onClick={() => alterarQuantidade(produto.id, -1)}
-              >
-                −
-              </button>
+          <div className="resumo-linha total-linha">
+            <span>Total</span>
+            <span>R$ {valorTotal.toFixed(2)}</span>
+          </div>
 
-              <span>
-                {quantidades[produto.id] || 0}
-              </span>
-
-              <button
-                onClick={() => alterarQuantidade(produto.id, 1)}
-              >
-                +
-              </button>
-            </div>
-
-          </li>
-        ))}
-      </ul>
-
-      <button
-        className="botao-finalizar"
-        onClick={finalizarPedido}
-        disabled={quantidadeTotalItens === 0}
-      >
-        Finalizar
-      </button>
-
-      {quantidadeTotalItens > 0 && (
-        <p className="resumo-pedido">
-          {quantidadeTotalItens}{' '}
-          {quantidadeTotalItens === 1 ? 'unidade' : 'unidades'}.
-          Total:{' '}
-          <strong>
-            R$ {valorTotal.toFixed(2)}
-          </strong>
-        </p>
-      )}
+          <button
+            className="botao-finalizar"
+            onClick={finalizarPedido}
+            disabled={quantidadeTotalItens === 0}
+          >
+            Finalizar
+          </button>
+        </aside>
+      </div>
     </div>
   );
 }
