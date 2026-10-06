@@ -92,19 +92,15 @@ http://localhost:5173
 
 ### Página Inicial
 
-> Em desenvolvimento.
+![Página Inicial](./screenshots/home.png)
 
 ### Cardápio
 
-> Em desenvolvimento.
+![Cardapio](./screenshots/cardapio.png)
 
 ### Carrinho de Compras
 
-> Em desenvolvimento.
-
-### Versão Mobile
-
-> Em desenvolvimento.
+![Carrinho](./screenshots/carrinho.png)
 
 ---
 
